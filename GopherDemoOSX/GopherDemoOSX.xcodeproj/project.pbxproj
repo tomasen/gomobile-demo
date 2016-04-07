@@ -1,0 +1,294 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		882943151CB6A6250076B7CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882943141CB6A6250076B7CA /* AppDelegate.swift */; };
+		882943171CB6A6250076B7CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882943161CB6A6250076B7CA /* ViewController.swift */; };
+		882943191CB6A6250076B7CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 882943181CB6A6250076B7CA /* Assets.xcassets */; };
+		8829431C1CB6A6250076B7CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8829431A1CB6A6250076B7CA /* Main.storyboard */; };
+		882943241CB6A6300076B7CA /* GopherKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882943231CB6A6300076B7CA /* GopherKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		882943111CB6A6250076B7CA /* GopherDemoOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GopherDemoOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		882943141CB6A6250076B7CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		882943161CB6A6250076B7CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		882943181CB6A6250076B7CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8829431B1CB6A6250076B7CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8829431D1CB6A6250076B7CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		882943231CB6A6300076B7CA /* GopherKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GopherKit.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8829430E1CB6A6250076B7CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				882943241CB6A6300076B7CA /* GopherKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		882943081CB6A6250076B7CA = {
+			isa = PBXGroup;
+			children = (
+				882943131CB6A6250076B7CA /* GopherDemoOSX */,
+				882943121CB6A6250076B7CA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		882943121CB6A6250076B7CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				882943111CB6A6250076B7CA /* GopherDemoOSX.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		882943131CB6A6250076B7CA /* GopherDemoOSX */ = {
+			isa = PBXGroup;
+			children = (
+				882943231CB6A6300076B7CA /* GopherKit.framework */,
+				882943141CB6A6250076B7CA /* AppDelegate.swift */,
+				882943161CB6A6250076B7CA /* ViewController.swift */,
+				882943181CB6A6250076B7CA /* Assets.xcassets */,
+				8829431A1CB6A6250076B7CA /* Main.storyboard */,
+				8829431D1CB6A6250076B7CA /* Info.plist */,
+			);
+			path = GopherDemoOSX;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		882943101CB6A6250076B7CA /* GopherDemoOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 882943201CB6A6250076B7CA /* Build configuration list for PBXNativeTarget "GopherDemoOSX" */;
+			buildPhases = (
+				8829430D1CB6A6250076B7CA /* Sources */,
+				8829430E1CB6A6250076B7CA /* Frameworks */,
+				8829430F1CB6A6250076B7CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GopherDemoOSX;
+			productName = GopherDemoOSX;
+			productReference = 882943111CB6A6250076B7CA /* GopherDemoOSX.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		882943091CB6A6250076B7CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = tomasen.org;
+				TargetAttributes = {
+					882943101CB6A6250076B7CA = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 8829430C1CB6A6250076B7CA /* Build configuration list for PBXProject "GopherDemoOSX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 882943081CB6A6250076B7CA;
+			productRefGroup = 882943121CB6A6250076B7CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				882943101CB6A6250076B7CA /* GopherDemoOSX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8829430F1CB6A6250076B7CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				882943191CB6A6250076B7CA /* Assets.xcassets in Resources */,
+				8829431C1CB6A6250076B7CA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8829430D1CB6A6250076B7CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				882943171CB6A6250076B7CA /* ViewController.swift in Sources */,
+				882943151CB6A6250076B7CA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8829431A1CB6A6250076B7CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8829431B1CB6A6250076B7CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8829431E1CB6A6250076B7CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8829431F1CB6A6250076B7CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		882943211CB6A6250076B7CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GopherDemoOSX",
+				);
+				INFOPLIST_FILE = GopherDemoOSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tomasen.org.GopherDemoOSX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		882943221CB6A6250076B7CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GopherDemoOSX",
+				);
+				INFOPLIST_FILE = GopherDemoOSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tomasen.org.GopherDemoOSX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8829430C1CB6A6250076B7CA /* Build configuration list for PBXProject "GopherDemoOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8829431E1CB6A6250076B7CA /* Debug */,
+				8829431F1CB6A6250076B7CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		882943201CB6A6250076B7CA /* Build configuration list for PBXNativeTarget "GopherDemoOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				882943211CB6A6250076B7CA /* Debug */,
+				882943221CB6A6250076B7CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 882943091CB6A6250076B7CA /* Project object */;
+}
