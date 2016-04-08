@@ -17,10 +17,10 @@
 @property(strong, readonly) id _ref;
 
 - (id)initWithRef:(id)ref;
-- (int)nanoTimeStamp;
-- (void)setNanoTimeStamp:(int)v;
-- (int)nanoCounter;
-- (void)setNanoCounter:(int)v;
+- (int64_t)nanoTimeStamp;
+- (void)setNanoTimeStamp:(int64_t)v;
+- (NSString*)nanoCounter;
+- (void)setNanoCounter:(NSString*)v;
 @end
 
 @protocol GoGopherKitCallback

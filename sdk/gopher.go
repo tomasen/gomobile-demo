@@ -1,30 +1,36 @@
 package GopherKit
 
 import (
+	"strconv"
 	"sync/atomic"
 	"time"
 )
 
 var (
-	states      = &State{}
 	callbacks   []Callback
 	nanoCounter uint64
 )
 
-//export Callback
+//Callback export
 type Callback interface {
 	StateDidUpdate()
 }
 
-//export State
-type State struct {
-	NanoTimeStamp int
-	NanoCounter   int
+//RegisterCallback export
+func RegisterCallback(c Callback) {
+	// save a copy of c and call DoSomething on it later
+	callbacks = append(callbacks, c)
 }
 
-//export Start
+//State export
+type State struct {
+	NanoTimeStamp int64
+	NanoCounter   string
+}
+
+//Start timer and counter
 func Start() {
-	atomic.StoreUint64(&nanoCounter, uint64(time.Now().Nanosecond()))
+	atomic.StoreUint64(&nanoCounter, uint64(time.Now().UnixNano()))
 	go func() {
 		for {
 			atomic.AddUint64(&nanoCounter, uint64(time.Millisecond))
@@ -34,17 +40,11 @@ func Start() {
 	}()
 }
 
-//export RegisterCallback
-func RegisterCallback(c Callback) {
-	// save a copy of c and call DoSomething on it later
-	callbacks = append(callbacks, c)
-}
-
-//export GetState
+//GetState export
 func GetState() *State {
 	return &State{
-		NanoTimeStamp: time.Now().Nanosecond(),
-		NanoCounter:   int(atomic.LoadUint64(&nanoCounter)),
+		NanoTimeStamp: time.Now().UnixNano(),
+		NanoCounter:   strconv.Itoa(int(atomic.LoadUint64(&nanoCounter))),
 	}
 }
 
