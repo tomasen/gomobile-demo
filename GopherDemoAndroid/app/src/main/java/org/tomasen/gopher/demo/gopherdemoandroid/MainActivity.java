@@ -6,14 +6,21 @@ import android.widget.Button;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import go.GopherKit.GopherKit;
+
+public abstract class MainActivity extends AppCompatActivity implements GopherKit.Callback {
 
     private Button btn;
+    private TextView NanoTimerLabel;
+    private TextView NanoCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        NanoTimerLabel = (TextView)findViewById(R.id.textView);
+        NanoCounter = (TextView)findViewById(R.id.textView2);
 
         btn = (Button)findViewById(R.id.button);
 
@@ -21,11 +28,22 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                TextView text1 = (TextView)findViewById(R.id.textView);
-                TextView text2 = (TextView)findViewById(R.id.textView2);
 
-                text1.setText("This is a text1");
-                text2.setText("This is a text2");
+                GopherKit.RegisterCallback(MainActivity.this);
+                GopherKit.Start();
+
+            }
+        });
+    }
+
+    @Override
+    public void StateDidUpdate() {
+        MainActivity.this.runOnUiThread(new Runnable() {
+            public void run() {
+                GopherKit.State state = GopherKit.GetState();
+                NanoTimerLabel.setText(state.getNanoCounter());
+                NanoCounter.setText(String.valueOf(state.getNanoTimeStamp()));
+                System.out.println(state.getNanoTimeStamp() + " " + state.getNanoCounter());
             }
         });
     }
