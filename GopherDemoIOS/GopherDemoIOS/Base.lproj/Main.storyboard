@@ -17,24 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="center" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKU-c0-28A">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="center" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AKU-c0-28A">
                                 <rect key="frame" x="143" y="72" width="315" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="315" id="0t3-Xu-Iyg"/>
                                     <constraint firstAttribute="height" constant="72" id="W76-rV-YpD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Counter" textAlignment="center" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1K-1j-CJa">
-                                <rect key="frame" x="143" y="210" width="315" height="72"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="29"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSg-QN-qtc">
-                                <rect key="frame" x="224" y="352" width="152" height="67"/>
+                                <rect key="frame" x="224" y="396" width="152" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="8me-nS-In3"/>
                                     <constraint firstAttribute="width" constant="152" id="Ek1-g6-5FI"/>
@@ -45,15 +39,21 @@
                                     <action selector="pressedStartButton:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="T63-fH-sqK"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="center" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1K-1j-CJa">
+                                <rect key="frame" x="79" y="198" width="443" height="144"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="34"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="AKU-c0-28A" firstAttribute="trailing" secondItem="z1K-1j-CJa" secondAttribute="trailing" id="8BL-gU-uXX"/>
+                            <constraint firstItem="AKU-c0-28A" firstAttribute="trailing" secondItem="z1K-1j-CJa" secondAttribute="trailing" constant="-64" id="8BL-gU-uXX"/>
                             <constraint firstItem="z1K-1j-CJa" firstAttribute="centerX" secondItem="vSg-QN-qtc" secondAttribute="centerX" id="OJj-mh-jYw"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vSg-QN-qtc" secondAttribute="bottom" constant="181" id="VUz-iF-eqP"/>
-                            <constraint firstItem="vSg-QN-qtc" firstAttribute="top" secondItem="z1K-1j-CJa" secondAttribute="bottom" constant="70" id="ZtI-Bq-3jM"/>
-                            <constraint firstItem="AKU-c0-28A" firstAttribute="leading" secondItem="z1K-1j-CJa" secondAttribute="leading" id="hjx-xm-kbi"/>
-                            <constraint firstItem="z1K-1j-CJa" firstAttribute="top" secondItem="AKU-c0-28A" secondAttribute="bottom" constant="66" id="ljO-Gb-NBG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vSg-QN-qtc" secondAttribute="bottom" constant="137" id="VUz-iF-eqP"/>
+                            <constraint firstItem="vSg-QN-qtc" firstAttribute="top" secondItem="z1K-1j-CJa" secondAttribute="bottom" constant="54" id="ZtI-Bq-3jM"/>
+                            <constraint firstItem="AKU-c0-28A" firstAttribute="leading" secondItem="z1K-1j-CJa" secondAttribute="leading" constant="64" id="hjx-xm-kbi"/>
+                            <constraint firstItem="z1K-1j-CJa" firstAttribute="top" secondItem="AKU-c0-28A" secondAttribute="bottom" constant="54" id="ljO-Gb-NBG"/>
                             <constraint firstItem="AKU-c0-28A" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="52" id="tyD-ZB-r4c"/>
                             <constraint firstItem="AKU-c0-28A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ufo-Vl-E37"/>
                         </constraints>

@@ -12,7 +12,7 @@ public abstract class MainActivity extends AppCompatActivity implements GopherKi
 
     private Button btn;
     private TextView NanoTimerLabel;
-    private TextView NanoCounter;
+    private TextView MessageLabel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public abstract class MainActivity extends AppCompatActivity implements GopherKi
         setContentView(R.layout.activity_main);
 
         NanoTimerLabel = (TextView)findViewById(R.id.textView);
-        NanoCounter = (TextView)findViewById(R.id.textView2);
+        MessageLabel = (TextView)findViewById(R.id.textView2);
 
         btn = (Button)findViewById(R.id.button);
 
@@ -41,8 +41,8 @@ public abstract class MainActivity extends AppCompatActivity implements GopherKi
         MainActivity.this.runOnUiThread(new Runnable() {
             public void run() {
                 GopherKit.State state = GopherKit.GetState();
-                NanoTimerLabel.setText(state.getNanoCounter());
-                NanoCounter.setText(String.valueOf(state.getNanoTimeStamp()));
+                NanoTimerLabel.setText(String.valueOf(state.getNanoTimeStamp()));
+                MessageLabel.setText(state.getMessage());
                 System.out.println(state.getNanoTimeStamp() + " " + state.getNanoCounter());
             }
         });

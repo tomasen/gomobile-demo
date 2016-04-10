@@ -36,7 +36,9 @@ class ViewController: NSViewController, GoGopherKitCallback {
     func stateDidUpdate() {
         dispatch_async(dispatch_get_main_queue()) {
             let state = GoGopherKitGetState()
-            self.nanoCounter.stringValue = state.nanoCounter()
+            if state.message() != "" && self.nanoCounter.stringValue != state.message() {
+                self.nanoCounter.stringValue = state.message()
+            }
             self.nanoTimerLabel.stringValue = String(state.nanoTimeStamp())
         }
     }
