@@ -7,9 +7,13 @@
 //
 
 import Cocoa
+import GopherKit
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, GoGopherKitCallback {
 
+    @IBOutlet weak var nanoTimerLabel: NSTextField!
+    @IBOutlet weak var nanoCounter: NSTextField!
+    @IBOutlet weak var mainButton: NSButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,5 +27,18 @@ class ViewController: NSViewController {
     }
 
 
+    @IBAction func mainButtonPressed(sender: AnyObject) {
+        GoGopherKitRegisterCallback(self)
+        GoGopherKitStart()
+        mainButton.hidden = true
+    }
+    
+    func stateDidUpdate() {
+        dispatch_async(dispatch_get_main_queue()) {
+            let state = GoGopherKitGetState()
+            self.nanoCounter.stringValue = state.nanoCounter()
+            self.nanoTimerLabel.stringValue = String(state.nanoTimeStamp())
+        }
+    }
 }
 

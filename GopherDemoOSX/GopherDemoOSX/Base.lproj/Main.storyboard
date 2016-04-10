@@ -672,7 +672,60 @@
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PUf-Bc-rqI">
+                                <rect key="frame" x="169" y="54" width="143" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="P5j-8L-TRP"/>
+                                    <constraint firstAttribute="width" constant="131" id="Szk-vV-rdy"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="开始" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EAn-WU-syD">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system" size="30"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="mainButtonPressed:" target="XfG-lQ-9wD" id="gUX-jw-f1E"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GMi-8U-WnW">
+                                <rect key="frame" x="79" y="215" width="323" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="s1e-lP-ItN"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="TImer" id="Pig-6i-2Of">
+                                    <font key="font" metaFont="system" size="30"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="V7a-Er-RCQ">
+                                <rect key="frame" x="79" y="150" width="323" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="ae5-0v-dGs"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Counter" id="kFN-I9-s94">
+                                    <font key="font" metaFont="system" size="30"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="PUf-Bc-rqI" firstAttribute="top" secondItem="V7a-Er-RCQ" secondAttribute="bottom" constant="49" id="EYd-dH-4fy"/>
+                            <constraint firstItem="GMi-8U-WnW" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="fGj-vZ-0eL"/>
+                            <constraint firstItem="GMi-8U-WnW" firstAttribute="trailing" secondItem="V7a-Er-RCQ" secondAttribute="trailing" id="huF-XG-W3Z"/>
+                            <constraint firstItem="V7a-Er-RCQ" firstAttribute="top" secondItem="GMi-8U-WnW" secondAttribute="bottom" constant="30" id="i0i-K3-f4l"/>
+                            <constraint firstItem="GMi-8U-WnW" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="81" id="kkJ-yW-9Ic"/>
+                            <constraint firstItem="GMi-8U-WnW" firstAttribute="leading" secondItem="V7a-Er-RCQ" secondAttribute="leading" id="oyi-O2-WgW"/>
+                            <constraint firstItem="V7a-Er-RCQ" firstAttribute="centerX" secondItem="PUf-Bc-rqI" secondAttribute="centerX" id="sa9-QV-FN5"/>
+                            <constraint firstItem="GMi-8U-WnW" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="vv4-JL-IYh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainButton" destination="PUf-Bc-rqI" id="bB6-wo-hto"/>
+                        <outlet property="nanoCounter" destination="V7a-Er-RCQ" id="dBO-dJ-cYz"/>
+                        <outlet property="nanoTimerLabel" destination="GMi-8U-WnW" id="L44-QL-kwP"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
