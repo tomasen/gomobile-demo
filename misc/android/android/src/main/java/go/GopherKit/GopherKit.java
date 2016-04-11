@@ -87,8 +87,8 @@ public abstract class GopherKit {
         private static final String DESCRIPTOR = "go.GopherKit.State";
         private static final int FIELD_NanoTimeStamp_GET = 0x00f;
         private static final int FIELD_NanoTimeStamp_SET = 0x01f;
-        private static final int FIELD_NanoCounter_GET = 0x10f;
-        private static final int FIELD_NanoCounter_SET = 0x11f;
+        private static final int FIELD_Message_GET = 0x10f;
+        private static final int FIELD_Message_SET = 0x11f;
         
         private go.Seq.Ref ref;
         
@@ -115,19 +115,19 @@ public abstract class GopherKit {
             Seq.send(DESCRIPTOR, FIELD_NanoTimeStamp_SET, in, null);
         }
         
-        public String getNanoCounter() {
+        public String getMessage() {
             Seq in = new Seq();
             Seq out = new Seq();
             in.writeRef(ref);
-            Seq.send(DESCRIPTOR, FIELD_NanoCounter_GET, in, out);
+            Seq.send(DESCRIPTOR, FIELD_Message_GET, in, out);
             return out.readString();
         }
         
-        public void setNanoCounter(String v) {
+        public void setMessage(String v) {
             Seq in = new Seq();
             in.writeRef(ref);
             in.writeString(v);
-            Seq.send(DESCRIPTOR, FIELD_NanoCounter_SET, in, null);
+            Seq.send(DESCRIPTOR, FIELD_Message_SET, in, null);
         }
         
         @Override public boolean equals(Object o) {
@@ -140,27 +140,27 @@ public abstract class GopherKit {
             if (thisNanoTimeStamp != thatNanoTimeStamp) {
                 return false;
             }
-            String thisNanoCounter = getNanoCounter();
-            String thatNanoCounter = that.getNanoCounter();
-            if (thisNanoCounter == null) {
-                if (thatNanoCounter != null) {
+            String thisMessage = getMessage();
+            String thatMessage = that.getMessage();
+            if (thisMessage == null) {
+                if (thatMessage != null) {
                     return false;
                 }
-            } else if (!thisNanoCounter.equals(thatNanoCounter)) {
+            } else if (!thisMessage.equals(thatMessage)) {
                 return false;
             }
             return true;
         }
         
         @Override public int hashCode() {
-            return java.util.Arrays.hashCode(new Object[] {getNanoTimeStamp(), getNanoCounter()});
+            return java.util.Arrays.hashCode(new Object[] {getNanoTimeStamp(), getMessage()});
         }
         
         @Override public String toString() {
             StringBuilder b = new StringBuilder();
             b.append("State").append("{");
             b.append("NanoTimeStamp:").append(getNanoTimeStamp()).append(",");
-            b.append("NanoCounter:").append(getNanoCounter()).append(",");
+            b.append("Message:").append(getMessage()).append(",");
             return b.append("}").toString();
         }
         

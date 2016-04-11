@@ -28,8 +28,8 @@ static NSString* errDomain = @"go.github.com/tomasen/gomobile-demo/sdk";
 #define _GO_GopherKit_State_DESCRIPTOR_ "go.GopherKit.State"
 #define _GO_GopherKit_State_FIELD_NanoTimeStamp_GET_ (0x00f)
 #define _GO_GopherKit_State_FIELD_NanoTimeStamp_SET_ (0x01f)
-#define _GO_GopherKit_State_FIELD_NanoCounter_GET_ (0x10f)
-#define _GO_GopherKit_State_FIELD_NanoCounter_SET_ (0x11f)
+#define _GO_GopherKit_State_FIELD_Message_GET_ (0x10f)
+#define _GO_GopherKit_State_FIELD_Message_SET_ (0x11f)
 
 @implementation GoGopherKitState {
 }
@@ -61,23 +61,23 @@ static NSString* errDomain = @"go.github.com/tomasen/gomobile-demo/sdk";
 	go_seq_free(&out_);
 }
 
-- (NSString*)nanoCounter {
+- (NSString*)message {
 	GoSeq in_ = {};
 	GoSeq out_ = {};
 	go_seq_writeRef(&in_, self._ref);
-	go_seq_send(_GO_GopherKit_State_DESCRIPTOR_, _GO_GopherKit_State_FIELD_NanoCounter_GET_, &in_, &out_);
+	go_seq_send(_GO_GopherKit_State_DESCRIPTOR_, _GO_GopherKit_State_FIELD_Message_GET_, &in_, &out_);
 	NSString* ret_ = go_seq_readUTF8(&out_);
 	go_seq_free(&in_);
 	go_seq_free(&out_);
 	return ret_;
 }
 
-- (void)setNanoCounter:(NSString*)v {
+- (void)setMessage:(NSString*)v {
 	GoSeq in_ = {};
 	GoSeq out_ = {};
 	go_seq_writeRef(&in_, self._ref);
 	go_seq_writeUTF8(&in_, v);
-	go_seq_send(_GO_GopherKit_State_DESCRIPTOR_, _GO_GopherKit_State_FIELD_NanoCounter_SET_, &in_, &out_);
+	go_seq_send(_GO_GopherKit_State_DESCRIPTOR_, _GO_GopherKit_State_FIELD_Message_SET_, &in_, &out_);
 	go_seq_free(&in_);
 	go_seq_free(&out_);
 }

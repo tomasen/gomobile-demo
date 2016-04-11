@@ -55,8 +55,8 @@ const (
 	proxyState_Descriptor             = "go.GopherKit.State"
 	proxyState_NanoTimeStamp_Get_Code = 0x00f
 	proxyState_NanoTimeStamp_Set_Code = 0x01f
-	proxyState_NanoCounter_Get_Code   = 0x10f
-	proxyState_NanoCounter_Set_Code   = 0x11f
+	proxyState_Message_Get_Code       = 0x10f
+	proxyState_Message_Set_Code       = 0x11f
 )
 
 type proxyState seq.Ref
@@ -73,23 +73,23 @@ func proxyState_NanoTimeStamp_Get(out, in *seq.Buffer) {
 	out.WriteInt64(v)
 }
 
-func proxyState_NanoCounter_Set(out, in *seq.Buffer) {
+func proxyState_Message_Set(out, in *seq.Buffer) {
 	ref := in.ReadRef()
 	v := in.ReadString()
-	ref.Get().(*GopherKit.State).NanoCounter = v
+	ref.Get().(*GopherKit.State).Message = v
 }
 
-func proxyState_NanoCounter_Get(out, in *seq.Buffer) {
+func proxyState_Message_Get(out, in *seq.Buffer) {
 	ref := in.ReadRef()
-	v := ref.Get().(*GopherKit.State).NanoCounter
+	v := ref.Get().(*GopherKit.State).Message
 	out.WriteString(v)
 }
 
 func init() {
 	seq.Register(proxyState_Descriptor, proxyState_NanoTimeStamp_Set_Code, proxyState_NanoTimeStamp_Set)
 	seq.Register(proxyState_Descriptor, proxyState_NanoTimeStamp_Get_Code, proxyState_NanoTimeStamp_Get)
-	seq.Register(proxyState_Descriptor, proxyState_NanoCounter_Set_Code, proxyState_NanoCounter_Set)
-	seq.Register(proxyState_Descriptor, proxyState_NanoCounter_Get_Code, proxyState_NanoCounter_Get)
+	seq.Register(proxyState_Descriptor, proxyState_Message_Set_Code, proxyState_Message_Set)
+	seq.Register(proxyState_Descriptor, proxyState_Message_Get_Code, proxyState_Message_Get)
 }
 
 func init() {
