@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import go.GopherKit.GopherKit;
 
-public abstract class MainActivity extends AppCompatActivity implements GopherKit.Callback {
+public class MainActivity extends AppCompatActivity {
 
     private Button btn;
     private TextView NanoTimerLabel;
@@ -29,22 +29,26 @@ public abstract class MainActivity extends AppCompatActivity implements GopherKi
             @Override
             public void onClick(View arg0) {
 
-                GopherKit.RegisterCallback(MainActivity.this);
+                GopherKit.RegisterCallback(new Callbacks());
                 GopherKit.Start();
 
             }
         });
     }
 
-    @Override
-    public void StateDidUpdate() {
-        MainActivity.this.runOnUiThread(new Runnable() {
-            public void run() {
-                GopherKit.State state = GopherKit.GetState();
-                NanoTimerLabel.setText(String.valueOf(state.getNanoTimeStamp()));
-                MessageLabel.setText(state.getMessage());
-                System.out.println(state.getNanoTimeStamp() + " " + state.getNanoCounter());
-            }
-        });
+    class Callbacks extends GopherKit.Callback.Stub {
+        @Override
+        public void StateDidUpdate() {
+            MainActivity.this.runOnUiThread(new Runnable() {
+                public void run() {
+                    GopherKit.State state = GopherKit.GetState();
+                    NanoTimerLabel.setText(String.valueOf(state.getNanoTimeStamp()));
+                    if (state.getMessage().length() != 0 && MessageLabel.getText() != state.getMessage()) {
+                        MessageLabel.setText(state.getMessage());
+                    }
+                }
+            });
+        }
     }
+
 }
