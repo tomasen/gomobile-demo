@@ -59,6 +59,9 @@ func Start() {
 					lastmessage = msg
 					callback()
 				}
+			} else {
+				lastmessage = err.Error()
+				callback()
 			}
 
 			time.Sleep(time.Second)
