@@ -1,17 +1,14 @@
 package GopherKit
 
 import (
-	"encoding/json"
-	"fmt"
+	"io"
 	"net/http"
-	"strconv"
-	"sync/atomic"
+	"regexp"
 	"time"
 )
 
 var (
 	callbacks   []Callback
-	nanoCounter uint64
 	lastmessage string
 )
 
@@ -29,17 +26,14 @@ func RegisterCallback(c Callback) {
 //State export
 type State struct {
 	NanoTimeStamp int64
-	NanoCounter   string
 	Message       string
 }
 
 //Start timer and counter
 func Start() {
-	atomic.StoreUint64(&nanoCounter, uint64(time.Now().UnixNano()))
 	go func() {
 		for {
-			atomic.AddUint64(&nanoCounter, uint64(time.Millisecond))
-			time.Sleep(time.Millisecond)
+			time.Sleep(time.Millisecond * 10)
 			callback()
 		}
 	}()
@@ -49,22 +43,17 @@ func Start() {
 			msg := ""
 			res, err := http.Get("http://api.huobi.com/staticmarket/ticker_btc_json.js")
 			if err == nil {
-				dec := json.NewDecoder(res.Body)
-				for {
-					t, err := dec.Token()
-					if err != nil {
-						break
-					}
-					if t == "last" && dec.More() {
-						last, _ := dec.Token()
-						msg += fmt.Sprintln("BTC:", last)
-						break
-					}
-					if t == "vol" && dec.More() {
-						vol, _ := dec.Token()
-						msg += fmt.Sprintln("VOL:", vol)
-					}
-				}
+				buf := make([]byte, 4096)
+				n, _ := io.ReadFull(res.Body, buf)
+
+				vol := regexp.MustCompile(`\"vol\":([0-9\.]+)`)
+				b := vol.FindAllStringSubmatch(string(buf[:n]), -1)
+				msg += "VOL:" + string(b[0][1]) + "\n"
+
+				btc := regexp.MustCompile(`\"last\":([0-9\.]+)`)
+				b = btc.FindAllStringSubmatch(string(buf[:n]), -1)
+				msg += "BTC:" + string(b[0][1]) + "\n"
+
 				res.Body.Close()
 				if msg != lastmessage {
 					lastmessage = msg
@@ -81,7 +70,6 @@ func Start() {
 func GetState() *State {
 	return &State{
 		NanoTimeStamp: time.Now().UnixNano(),
-		NanoCounter:   strconv.Itoa(int(atomic.LoadUint64(&nanoCounter))),
 		Message:       lastmessage,
 	}
 }

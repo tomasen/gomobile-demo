@@ -19,8 +19,6 @@
 - (id)initWithRef:(id)ref;
 - (int64_t)nanoTimeStamp;
 - (void)setNanoTimeStamp:(int64_t)v;
-- (NSString*)nanoCounter;
-- (void)setNanoCounter:(NSString*)v;
 - (NSString*)message;
 - (void)setMessage:(NSString*)v;
 @end
