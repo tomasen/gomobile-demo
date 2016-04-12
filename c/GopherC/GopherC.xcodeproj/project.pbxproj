@@ -1,0 +1,266 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		884A7C2A1CBCBF1C002FDBC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 884A7C291CBCBF1C002FDBC5 /* main.m */; };
+		884A7C381CBCC656002FDBC5 /* world.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 884A7C331CBCBF4B002FDBC5 /* world.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		884A7C241CBCBF1C002FDBC5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		884A7C261CBCBF1C002FDBC5 /* GopherC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GopherC; sourceTree = BUILT_PRODUCTS_DIR; };
+		884A7C291CBCBF1C002FDBC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		884A7C311CBCBF43002FDBC5 /* world.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = world.h; sourceTree = "<group>"; };
+		884A7C331CBCBF4B002FDBC5 /* world.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = world.a; sourceTree = "<group>"; };
+		884A7C391CBCC6DA002FDBC5 /* hello.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = hello.a; sourceTree = "<group>"; };
+		884A7C3A1CBCC6DA002FDBC5 /* hello.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hello.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		884A7C231CBCBF1C002FDBC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				884A7C381CBCC656002FDBC5 /* world.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		884A7C1D1CBCBF1C002FDBC5 = {
+			isa = PBXGroup;
+			children = (
+				884A7C281CBCBF1C002FDBC5 /* GopherC */,
+				884A7C271CBCBF1C002FDBC5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		884A7C271CBCBF1C002FDBC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				884A7C261CBCBF1C002FDBC5 /* GopherC */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		884A7C281CBCBF1C002FDBC5 /* GopherC */ = {
+			isa = PBXGroup;
+			children = (
+				884A7C391CBCC6DA002FDBC5 /* hello.a */,
+				884A7C3A1CBCC6DA002FDBC5 /* hello.h */,
+				884A7C331CBCBF4B002FDBC5 /* world.a */,
+				884A7C311CBCBF43002FDBC5 /* world.h */,
+				884A7C291CBCBF1C002FDBC5 /* main.m */,
+			);
+			path = GopherC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		884A7C251CBCBF1C002FDBC5 /* GopherC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 884A7C2D1CBCBF1C002FDBC5 /* Build configuration list for PBXNativeTarget "GopherC" */;
+			buildPhases = (
+				884A7C221CBCBF1C002FDBC5 /* Sources */,
+				884A7C231CBCBF1C002FDBC5 /* Frameworks */,
+				884A7C241CBCBF1C002FDBC5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GopherC;
+			productName = GopherC;
+			productReference = 884A7C261CBCBF1C002FDBC5 /* GopherC */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		884A7C1E1CBCBF1C002FDBC5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "PINIDEA LLC.";
+				TargetAttributes = {
+					884A7C251CBCBF1C002FDBC5 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 884A7C211CBCBF1C002FDBC5 /* Build configuration list for PBXProject "GopherC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 884A7C1D1CBCBF1C002FDBC5;
+			productRefGroup = 884A7C271CBCBF1C002FDBC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				884A7C251CBCBF1C002FDBC5 /* GopherC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		884A7C221CBCBF1C002FDBC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				884A7C2A1CBCBF1C002FDBC5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		884A7C2B1CBCBF1C002FDBC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		884A7C2C1CBCBF1C002FDBC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		884A7C2E1CBCBF1C002FDBC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GopherC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		884A7C2F1CBCBF1C002FDBC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GopherC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		884A7C211CBCBF1C002FDBC5 /* Build configuration list for PBXProject "GopherC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				884A7C2B1CBCBF1C002FDBC5 /* Debug */,
+				884A7C2C1CBCBF1C002FDBC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		884A7C2D1CBCBF1C002FDBC5 /* Build configuration list for PBXNativeTarget "GopherC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				884A7C2E1CBCBF1C002FDBC5 /* Debug */,
+				884A7C2F1CBCBF1C002FDBC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 884A7C1E1CBCBF1C002FDBC5 /* Project object */;
+}
